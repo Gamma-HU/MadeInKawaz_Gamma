@@ -4,8 +4,10 @@ public class Manager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int count;
-    int zombiNum = 3;
+    public int zombiNum = 5;
     public GameObject[] zombi;
+    public Sprite old;
+    public Sprite zom;
 
     Color color;
     Color firecolor;
@@ -13,17 +15,17 @@ public class Manager : MonoBehaviour
     {
         color = new Color(255, 255, 255, 255);
         firecolor = new Color(255, 0, 0, 255);
-        count = zombiNum;
+        count = zombiNum - 1;
         int fire = Random.Range(0, zombiNum);
         for (int i = 0; i < zombiNum; i++) {
             if (i != fire)
             {
                 zombi[i].tag = "Untagged";
-                zombi[i].GetComponent<SpriteRenderer>().color = color;
+                zombi[i].GetComponent<SpriteRenderer>().sprite = zom;
             }
             else {
                 zombi[i].tag = "Finish";
-                zombi[i].GetComponent <SpriteRenderer>().color = firecolor;
+                zombi[i].GetComponent <SpriteRenderer>().sprite = old;
             }
         }
     }
@@ -35,5 +37,6 @@ public class Manager : MonoBehaviour
             Debug.Log("clear!!");
             GameManager.Clear();
         }
+        Debug.Log(count);
     }
 }

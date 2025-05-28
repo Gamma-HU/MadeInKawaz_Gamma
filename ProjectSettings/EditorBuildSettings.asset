@@ -80,4 +80,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Suyobon/mitukeru.unity
     guid: 26e29370aa22dbc4ab0edb835e2c0c60
+  - enabled: 1
+    path: Assets/mamama/Scene/mamama.unity
+    guid: f74f793d670cecb428a0573430bac177
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

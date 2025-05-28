@@ -10,12 +10,15 @@ public class Player_mamama : MonoBehaviour
     private Vector3 screenPosi;
     private int canmove;
     private int gaming;
+    int count;
     public GameObject Manager;
     public GameObject engine;
     public Sprite sorry;
     public Sprite chuuni;
+    Manager manager;
     void Start()
     {
+        manager = Manager.GetComponent<Manager>();
         canmove = 0;
         gaming = 1;
         gameObject.GetComponent<SpriteRenderer>().sprite = chuuni;
@@ -24,8 +27,8 @@ public class Player_mamama : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (canmove * gaming == 1)
+        count = manager.count;
+        if (canmove * gaming * count != 0)
         {
             mousePosi = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);//マウスポジを取得
             screenPosi = Camera.main.ScreenToWorldPoint(mousePosi);//スクリーン座標に変換（？）
