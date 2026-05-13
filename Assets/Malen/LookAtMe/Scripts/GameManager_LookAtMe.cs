@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager_Malen : MonoBehaviour
+public class GameManager_LookAtMe : MonoBehaviour
 {
     [SerializeField] GameObject[] people;
     [SerializeField] Sprite correctSprite;
@@ -29,16 +29,20 @@ public class GameManager_Malen : MonoBehaviour
             GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
             foreach (GameObject person in people)
             {
-                if(person != correctPerson){
+                if (person != correctPerson)
+                {
                     person.GetComponent<Button>().interactable = false;
                 }
             }
-            if(selectedObject == correctPerson){
+            if (selectedObject == correctPerson)
+            {
                 particle.transform.position = correctPerson.transform.position;
                 particle.Play();
                 audioSource.PlayOneShot(correctSE);
                 GameManager.Clear();
-            }else{
+            }
+            else
+            {
                 audioSource.PlayOneShot(incorrectSE);
             }
         }
