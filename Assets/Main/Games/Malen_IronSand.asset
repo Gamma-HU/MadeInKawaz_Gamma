@@ -19,5 +19,5 @@ MonoBehaviour:
   statement: "\u3042\u3064\u3081\u308D\uFF01"
   explanation: "\u7802\u9244\u3092\u5168\u90E8\u3042\u3064\u3081\u3088\u3046"
   gameType: 0
-  iconImage: {fileID: 21300000, guid: 85b0355bc4dccf441a555f97132ef4f1, type: 3}
-  screenshotImage: {fileID: 21300000, guid: 3bf0292ce8af0064ebb9b52cb8db0ff0, type: 3}
+  iconImage: {fileID: 21300000, guid: 5340ee931b14cce4e9b99094bc31a439, type: 3}
+  screenshotImage: {fileID: 21300000, guid: efe3496abf0f7ee4785e8e60a16d84c9, type: 3}
