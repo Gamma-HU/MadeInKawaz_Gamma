@@ -16,7 +16,7 @@ MonoBehaviour:
   titleName: "\u91E3\u308A"
   authorName: "\u4E94\u90CE"
   developerName: Gamma
-  statement: "\u3064\u308C\uFF01"
+  statement: "\u307E\u3066\uFF01"
   explanation: "\u30BF\u30A4\u30DF\u30F3\u30B0\u3088\u304F\u9B5A\u3092\u91E3\u308C\uFF01"
   gameType: 1
   iconImage: {fileID: 21300000, guid: cc70e2ad95b4e944491f751294ed1851, type: 3}

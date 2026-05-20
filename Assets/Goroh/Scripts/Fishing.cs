@@ -49,7 +49,13 @@ public class Fishing : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         Setcatch(true);
-        _fisher.transform.DOShakePosition(_gracePeriod, 0.5f, 100, 90, false, false);
+        _fisher.transform.DOShakePosition(_gracePeriod / 2f, 0.5f, 100, 90, false, false).OnComplete(() =>
+        {
+            foreach (GameObject g in _catched)
+            {
+                g.SetActive(false);
+            }
+        });
         yield return new WaitForSeconds(_gracePeriod);
         Setcatch(false);
         Miss();
