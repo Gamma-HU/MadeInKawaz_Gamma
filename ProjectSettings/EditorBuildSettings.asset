@@ -89,5 +89,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Malen/IronSand/Scene/IronSand.unity
     guid: 40200b122f65e7c4e8dd9b2c0149c3bd
+  - enabled: 1
+    path: Assets/Goroh/Fishing/Fishing.unity
+    guid: fe336754501f48149b3952d0446da38d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
