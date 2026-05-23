@@ -27,6 +27,9 @@ namespace g
         [SerializeField]
         GameObject shockEff;
 
+        [SerializeField]
+        Sprite realGokiSprite;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -35,6 +38,11 @@ namespace g
             rb = GetComponent<Rigidbody2D>();
             target = new Vector3(Random.Range(-width / 2, width / 2), Random.Range(-height / 2, height / 2), 0);
             transform.position = new Vector3(Random.Range(-width / 2, width / 2), Random.Range(-height / 2, height / 2), 0);
+
+            if(Random.value < 0.1f)
+            {
+                spriteRenderer.sprite = realGokiSprite;
+            }
         }
 
         // Update is called once per frame
