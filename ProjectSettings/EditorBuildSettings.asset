@@ -92,5 +92,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Goroh/Fishing/Fishing.unity
     guid: fe336754501f48149b3952d0446da38d
+  - enabled: 1
+    path: Assets/Koitan/EightPuzzle/Scenes/EightPuzzle.unity
+    guid: 3b6957af92240534d858717ccf745053
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
