@@ -19,7 +19,7 @@ namespace Goroh.RotationGame
                 return;
             }
 
-            _currentScore += _rotationRecorder.LatestDeltaDegrees * _scoreMultiplier * Time.deltaTime;
+            _currentScore += _rotationRecorder.LatestDeltaDegrees * _scoreMultiplier;
 
             if (_currentScore >= _quota)
             {

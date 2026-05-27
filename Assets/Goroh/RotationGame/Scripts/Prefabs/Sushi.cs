@@ -10,7 +10,7 @@ namespace Goroh.RotationGame
         [SerializeField] Score _score;
         public void Init(Score score)
         {
-            this.transform.position = new Vector3 (0, 1.83f, 0);
+            this.transform.position = new Vector3 (0, 1.09f, 0);
             _score = score;
             _SushiObject.transform.localPosition = _initialPos;
         }
