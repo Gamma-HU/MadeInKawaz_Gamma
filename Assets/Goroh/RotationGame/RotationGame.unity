@@ -663,7 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationRecorder: {fileID: 2066335866}
   _scoreMultiplier: 1
-  _quota: 50
+  _quota: 1440
 --- !u!1 &1500616571
 GameObject:
   m_ObjectHideFlags: 0
