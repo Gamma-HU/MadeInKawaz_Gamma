@@ -17,7 +17,7 @@ MonoBehaviour:
   authorName: "\u4E94\u90CE"
   developerName: Gamma
   statement: "\u307E\u308F\u305B\uFF01"
-  explanation: "\u307E\u308F\u305B\uFF01"
+  explanation: "\u30AB\u30FC\u30BD\u30EB\u3092\u307E\u308F\u305B\uFF01"
   gameType: 0
   iconImage: {fileID: 21300000, guid: 7adc32e9d338def4b9993d7065fffbc2, type: 3}
   screenshotImage: {fileID: 21300000, guid: 918f0dc007738414ab99b1bb19cf3e07, type: 3}
