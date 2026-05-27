@@ -39,7 +39,7 @@ namespace g
             target = new Vector3(Random.Range(-width / 2, width / 2), Random.Range(-height / 2, height / 2), 0);
             transform.position = new Vector3(Random.Range(-width / 2, width / 2), Random.Range(-height / 2, height / 2), 0);
 
-            if(Random.value < 0.1f)
+            if (Random.value < 0.01f)
             {
                 spriteRenderer.sprite = realGokiSprite;
             }
