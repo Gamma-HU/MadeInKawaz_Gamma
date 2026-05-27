@@ -95,5 +95,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Koitan/EightPuzzle/Scenes/EightPuzzle.unity
     guid: 3b6957af92240534d858717ccf745053
+  - enabled: 1
+    path: Assets/Malen/Tarai/Scene/Tarai.unity
+    guid: 082129ceb56eee3438e48ae04fa7cc49
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

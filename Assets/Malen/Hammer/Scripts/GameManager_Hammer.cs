@@ -11,7 +11,7 @@ public class GameManager_Hammer : MonoBehaviour
     [SerializeField] private ParticleSystem hitParticle;
 
     // [SerializeField] private float requiredMouseMoveAmount = 500f;
-    [SerializeField] private float rotationDegreesPerPixel = 0.2f;
+    [SerializeField] private float rotationDegreesPerScreenWidth = 72f;
     [SerializeField] private float[] hammerRotationZThresholds;
     [SerializeField] private float nailMoveDownAmount = 0.1f;
 
@@ -23,7 +23,7 @@ public class GameManager_Hammer : MonoBehaviour
 
     private void Start()
     {
-        prevMousePosition = Input.mousePosition;
+        prevMousePosition = GetPointerPosition();
     }
 
     private void Update()
@@ -35,16 +35,17 @@ public class GameManager_Hammer : MonoBehaviour
 
         debugText.text = currentMouseMoveAmount.ToString();
 
-        Vector2 currentMousePosition = Input.mousePosition;
+        Vector2 currentMousePosition = GetPointerPosition();
         Vector2 delta = currentMousePosition - prevMousePosition;
 
         // accumulate distance for clearing condition
-        currentMouseMoveAmount += delta.magnitude;
+        Vector2 normalizedDelta = GetNormalizedDelta(delta);
+        currentMouseMoveAmount += normalizedDelta.magnitude;
 
         // rotate hammer based on horizontal mouse movement (follow mouse)
         if (hammer != null)
         {
-            float rotationDelta = Mathf.Abs(delta.x) * rotationDegreesPerPixel;
+            float rotationDelta = Mathf.Abs(normalizedDelta.x) * rotationDegreesPerScreenWidth;
             hammer.transform.Rotate(0f, 0f, rotationDelta, Space.Self);
             totalHammerRotationAmount += rotationDelta;
         }
@@ -97,5 +98,21 @@ public class GameManager_Hammer : MonoBehaviour
 
             nextHammerThresholdIndex++;
         }
+    }
+
+    private Vector2 GetPointerPosition()
+    {
+        if (Input.touchCount > 0)
+        {
+            return Input.touches[0].position;
+        }
+
+        return Input.mousePosition;
+    }
+
+    private Vector2 GetNormalizedDelta(Vector2 delta)
+    {
+        float referenceWidth = Mathf.Max(1f, Screen.width);
+        return delta / referenceWidth;
     }
 }
