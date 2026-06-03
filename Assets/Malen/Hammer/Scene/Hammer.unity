@@ -6217,7 +6217,7 @@ MonoBehaviour:
   seSource: {fileID: 2078397320}
   hitClip: {fileID: 8300000, guid: ad2f5b7a5b6ebea4c86d94cc595743f4, type: 3}
   hitParticle: {fileID: 1094676205}
-  rotationDegreesPerScreenWidth: 110
+  rotationDegreesPerScreenWidth: 250
   hammerRotationZThresholds:
   - 90
   - 450
